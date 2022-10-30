@@ -1,0 +1,219 @@
+
+.App{
+    background-color: #e0e0e00e;
+    font-family: 'Joan', serif;
+
+    .wrapper{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .todosApp{
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #bababa0e;
+            justify-content: center;
+        }
+    }
+}
+
+.article{
+    width: 100%;
+    text-align: center;
+    color: rgb(164, 164, 164);
+    h1{
+        font-weight: 300;
+    }
+}
+.input_withar{
+    display: grid;
+    border: 1px solid rgba(144, 144, 144, 0.499);
+    grid-template-columns: 5% 92%;
+    input{
+        font-style: italic;
+        height: 45px;
+        text-transform: capitalize;
+        color: rgb(87, 87, 87);
+        border: none;
+        border-left: 1px solid rgba(205, 202, 202, 0.745);
+        min-width: 100% ;
+        padding: 1px 10px;
+        &::placeholder{
+            text-transform: none;
+            color: gray;
+            opacity: .3;
+
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    .arr{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: rgb(164, 164, 164);
+        background-color: #fff;
+    }
+}
+.main_theme{
+    min-width: 710px;
+    color: rgb(164, 164, 164);
+    width: 100%;
+    -webkit-box-shadow: 1px 1px 12px 4px rgba(107, 107, 107, 0.2);
+    -moz-box-shadow: 1px 1px 12px 4px rgba(107, 107, 107, 0.2);
+    box-shadow: 1px 1px 12px 4px rgba(107, 107, 107, 0.2);
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .inp{
+        margin-left: 3px;
+        
+    }
+    .checkmark {
+        position: absolute;
+        top: -14px;
+        left: -2px;
+        height: 25px;
+        width: 25px;
+        transition: .2s ease-in-out;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        border: 1px solid rgb(189, 188, 188);
+    }
+    .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        & input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+    }
+    h1{
+        text-transform: capitalize;
+        margin-left: 40px;
+        
+    }
+}
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.todo_item{
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(49, 49, 49);
+    border-left: 1px solid rgb(49, 49, 49);
+    border-right: 1px solid rgb(49, 49, 49);
+    align-items: center;
+    h3{
+        display: flex;
+        justify-content: end;
+        margin-top: -15px;
+        transition: .3s ease-in-out;
+    }
+}
+.nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    color: rgb(164, 164, 164);
+    
+    h3:last-child{
+        transition: .1s ease-in-out;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        span{
+            font-size: 20px;
+        }
+        
+    }
+    button{
+        border: none;
+        color: rgb(137, 137, 137);
+        transition: .1s ease-in-out;
+        background-color: transparent;
+        &:hover{
+            cursor: pointer;
+            background-color: rgba(181, 181, 181, 0.34);
+        }
+    }
+    .buttons{
+        gap: 10px;
+        display: flex;
+    }
+}
+.done{
+    text-decoration: line-through;
+}
+.doesnt_done{
+    text-decoration: none;
+}
+.yes_posts{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.no_posts{
+    display: none;
+}
+.arr:hover{
+    cursor: pointer;
+}
+.hasTitle{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    text-align: center;
+    h3{
+        margin-left: 10px;
+    }
+}
+.dontHasTitle{
+    display: none;
+}
